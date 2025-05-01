@@ -1,0 +1,128 @@
+@import "tailwindcss";
+/*@tailwind base;*/
+/*@tailwind components;*/
+/*@tailwind utilities;*/
+/*html, * {*/
+/*    cursor: url('/src/assets/images/white-cursor.svg'), auto;*/
+/*}*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    height: 100vh;
+    cursor: url('/src/assets/images/white-cursor.svg'), auto;
+
+}
+
+
+.cloud-button {
+    background: #fff;
+    color: #000;
+    padding: 1rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 9999px;         /* 💡 extra round for cloud feel */
+    box-shadow:
+            -30px -20px 0 #fff,
+            40px -5px 0 #fff,
+            70px -10px 0 #fff,
+            -50px 20px 0 #fff,
+            60px 30px 0 #fff,
+            30px -35px 0 #fff,
+            0 35px 0 #fff;
+    position: relative;
+}
+.cloud-button:hover {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    box-shadow:
+            -30px -20px 0 #f0f0f0,
+            40px -5px 0 #f0f0f0,
+            70px -10px 0 #f0f0f0,
+            -50px 20px 0 #f0f0f0,
+            60px 30px 0 #f0f0f0,
+            30px -35px 0 #f0f0f0,
+            0 35px 0 #f0f0f0;
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+.start-background{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url("/src/assets/images/windows-bliss.webp");
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+
+}
+.button-hover:hover {
+    cursor: url('/src/assets/images/hovered-cursor.svg'), auto;
+}
+.no-cursor::after {
+    display: none !important;
+}
+
+.custom-cursor {
+    display: inline-block;
+    font-weight: bold;
+    animation: blink 0.6s infinite ;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.lagos-brand-shoot{
+    background-image: url("../../assets/images/pretty-prints-shoots.png");
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    list-style: none;
+}
+
+.menu li {
+    width: 200px;
+    height: 50px;
+    transition: background-position-x 0.9s linear;
+    text-align: center;
+
+    a {
+        font-size: 22px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.45s;
+    }
+
+    &:hover {
+        background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+        animation: line 1s;
+    }
+
+    &:hover a {
+        color: #d94f5c;
+    }
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+@keyframes line {
+    0% {
+        background-position-x: 390px;
+    }
+}
