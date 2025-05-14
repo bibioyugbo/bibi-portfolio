@@ -14,7 +14,7 @@ export default function LandingPage() {
     }
 
     function handleStart() {
-        navigate(RouteConstant.landing.works.path)
+        navigate(RouteConstant.dashboard.works.path)
         playClickSound(); // this runs immediately, which is fine if it's independent
     }
     const items = [

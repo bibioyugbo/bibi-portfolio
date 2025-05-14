@@ -1,5 +1,5 @@
 export const RouteConstant = {
-    landing:{
+    dashboard:{
         home: {
             path:'/',
             name:'Landing Page'
@@ -11,6 +11,10 @@ export const RouteConstant = {
         brands: {
             path:'/brands',
             name:'Brands Page'
+        },
+        polaroid: {
+            path:'/polaroids',
+            name:'Polaroid Page'
         },
         musicVideos: {
             path:'/music-videos',

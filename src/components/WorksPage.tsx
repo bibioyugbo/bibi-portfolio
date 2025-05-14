@@ -10,7 +10,8 @@ import linkedIn from "../assets/images/linkedin-white.png";
 import {useRef, useState} from "react";
 import {RouteConstant} from "../util/constant/RouteConstant.ts";
 import {useNavigate} from "react-router-dom";
-import ModelingPage from "./ModelingPage.tsx";
+import ModelingLanding from "./modeling/ModelingLanding.tsx";
+import WebDevLanding from "./webDev/WebDevLanding.tsx";
 
 export default function WorksPage(){
 
@@ -26,7 +27,7 @@ export default function WorksPage(){
         setisWorksClicked(true)
     }
     function handleBack() {
-       navigate(RouteConstant.landing.home.path)
+       navigate(RouteConstant.dashboard.home.path)
     }
     const modelRef = useRef<HTMLDivElement | null>(null);
     const webDevRef = useRef<HTMLDivElement | null>(null);
@@ -63,6 +64,10 @@ export default function WorksPage(){
                             <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/obehioye-oyugbo-022107216/">
                                 <img src={linkedIn} height={25} width={25} alt="" />
                             </a>
+                            <a href={"/bibiCV.pdf"} target={"_blank"} download className=" bg-white text-sm text-black rounded-md cursor-pointer p-2"
+                            > Download CV
+                            </a>
+
                         </div>
                         <div className={"flex justify-end"}>
                             <img onClick={()=>handleMute()} className={"cursor-pointer"} src={muteImg} height={10} width={25} alt={""}/>
@@ -92,13 +97,13 @@ export default function WorksPage(){
                                         <img src={folderImg} height={90} width={90} alt="" />
                                     </div>
 
-                                    <div onClick={()=>scrollToSection(modelRef)}  className="flex flex-col items-center translate-y-[10px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">
-                                        <p className="text-[12px]">Modeling</p>
+                                    <div onClick={()=>scrollToSection(webDevRef)}  className="flex flex-col items-center translate-y-[10px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">
+                                        <p className="text-[12px]">Web Development</p>
                                         <img src={folderImg} height={90} width={90} alt="" />
                                     </div>
 
-                                    <div onClick={()=>scrollToSection(webDevRef)}  className="flex flex-col items-center translate-y-[30px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">
-                                        <p className="text-[12px]">Web Development</p>
+                                    <div onClick={()=>scrollToSection(modelRef)}  className="flex flex-col items-center translate-y-[30px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">
+                                        <p className="text-[12px]">Modeling</p>
                                         <img src={folderImg} height={90} width={90} alt="" />
                                     </div>
                                 </div>
@@ -147,9 +152,13 @@ export default function WorksPage(){
 
                 </div>
             </motion.div>
-            <div ref={modelRef}>
-                <ModelingPage/>
+            <div ref={webDevRef}>
+                <WebDevLanding/>
             </div>
+            <div ref={modelRef}>
+                <ModelingLanding/>
+            </div>
+
 
         </>
     )

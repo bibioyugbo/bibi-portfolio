@@ -4,6 +4,7 @@ import LandingPageView from "../../views/LandingPageView.tsx";
 import WorksPageView from "../../views/WorksPageView.tsx";
 import BrandPageView from "../../views/BrandPageView.tsx";
 import MusicVideosPageView from "../../views/MusicVideosPageView.tsx";
+import PolaroidsView from "../../views/PolaroidsView.tsx";
 
 
 
@@ -11,26 +12,32 @@ import MusicVideosPageView from "../../views/MusicVideosPageView.tsx";
 
 export const dashboardRoutes: RouteType[] = [
     {
-        path: RouteConstant.landing.home.path,
-        name: RouteConstant.landing.home.name,
+        path: RouteConstant.dashboard.home.path,
+        name: RouteConstant.dashboard.home.name,
         element: <LandingPageView/>,
         metadata:{isProtected:false}
     },
     {
-        path: RouteConstant.landing.works.path,
-        name: RouteConstant.landing.works.name,
+        path: RouteConstant.dashboard.works.path,
+        name: RouteConstant.dashboard.works.name,
         element: <WorksPageView/>,
         metadata:{isProtected:false}
     },
     {
-        path: RouteConstant.landing.brands.path,
-        name: RouteConstant.landing.brands.name,
+        path: RouteConstant.dashboard.brands.path,
+        name: RouteConstant.dashboard.brands.name,
         element: <BrandPageView/>,
         metadata:{isProtected:false}
     },
     {
-        path: RouteConstant.landing.musicVideos.path,
-        name: RouteConstant.landing.musicVideos.name,
+        path: RouteConstant.dashboard.polaroid.path,
+        name: RouteConstant.dashboard.polaroid.name,
+        element: <PolaroidsView/>,
+        metadata:{isProtected:false}
+    },
+    {
+        path: RouteConstant.dashboard.musicVideos.path,
+        name: RouteConstant.dashboard.musicVideos.name,
         element: <MusicVideosPageView/>,
         metadata:{isProtected:false}
     },

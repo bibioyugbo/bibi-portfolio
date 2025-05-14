@@ -1,4 +1,4 @@
-import MusicVideosPage from "../components/MusicVideosPage.tsx";
+import MusicVideosPage from "../components/modeling/MusicVideosPage.tsx";
 
 export default function MusicVideosPageView(){
     return(

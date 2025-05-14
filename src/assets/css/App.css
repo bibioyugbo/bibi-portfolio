@@ -14,7 +14,23 @@ body{
     cursor: url('/src/assets/images/white-cursor.svg'), auto;
 
 }
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
+.animated-background {
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
 
 .cloud-button {
     background: #fff;
@@ -77,8 +93,8 @@ body{
 }
 .lagos-brand-shoot{
     background-image: url("../../assets/images/pretty-prints-shoots.png");
-    width: 100vw;
-    height: 100vh;
+    /*width: 100vw;*/
+    /*height: 100vh;*/
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
