@@ -1,5 +1,7 @@
 import chooselifeSS from "../../assets/images/chooselife-ss.png"
 import dateOrDisaster from "../../assets/images/date-or-disaster.png"
+import chessGame from "../../assets/images/chess-game.png"
+
 
 
 
@@ -17,6 +19,12 @@ export default function WebDevLanding(){
             name: "Date or Disaster",
             description: "Dating Question Game",
             src: dateOrDisaster,
+            liveDemo: "https://date-or-disaster.netlify.app/"
+        },
+        {
+            name: "Chess Multiplayer Game",
+            description: "A two player chess game",
+            src: chessGame,
             liveDemo: "https://date-or-disaster.netlify.app/"
         }
     ]
