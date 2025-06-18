@@ -1,5 +1,6 @@
 import {useNavigate} from "react-router-dom";
 import {RouteConstant} from "../../util/constant/RouteConstant.ts";
+import Footer from "../layouts/Footer.tsx";
 
 
 
@@ -43,6 +44,8 @@ export default function ModelingLanding(){
                     </li>
                     <li><a>Film</a></li>
                 </ul>
+
+                <Footer/>
             </div>
         </>
     )

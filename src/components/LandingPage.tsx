@@ -59,7 +59,7 @@ export default function LandingPage() {
                                     </AnimatePresence>
                                 </div>
                                 <div>
-                                    <button onClick={()=>handleStart()} className={"cloud-button text-[30px] mt-[60px] sm:mt-0"}>start</button>
+                                    <button onClick={()=>handleStart()} className={"cloud-button text-blue-400 text-[30px] mt-[60px] sm:mt-0"}>start</button>
                                 </div>
                             </div>
                         </motion.div>
