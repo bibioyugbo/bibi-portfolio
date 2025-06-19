@@ -1,9 +1,13 @@
-import WorksPage from "../components/WorksPage.tsx";
+import WorksPage from "../components/pages/WorksPage.tsx";
+import WorksPageLayout from "../components/layouts/WorksPageLayout.tsx";
 
 export default function WorksPageView(){
     return(
         <>
-            <WorksPage/>
+            <WorksPageLayout>
+                <WorksPage/>
+            </WorksPageLayout>
+
         </>
     )
 }

@@ -1,6 +1,6 @@
 import {useNavigate} from "react-router-dom";
-import {RouteConstant} from "../../util/constant/RouteConstant.ts";
-import Footer from "../layouts/Footer.tsx";
+import {RouteConstant} from "../../../util/constant/RouteConstant.ts";
+import Footer from "../../layouts/Footer.tsx";
 
 
 

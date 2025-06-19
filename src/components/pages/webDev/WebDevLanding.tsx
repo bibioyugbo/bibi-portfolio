@@ -1,13 +1,15 @@
-import chooselifeSS from "../../assets/images/chooselife-ss.png"
-import dateOrDisaster from "../../assets/images/date-or-disaster.png"
-import chessGame from "../../assets/images/chess-game.png"
+import chooselifeSS from "../../../assets/images/chooselife-ss.png"
+import dateOrDisaster from "../../../assets/images/date-or-disaster.png"
+import chessGame from "../../../assets/images/chess-game.png"
 
 
+interface WebDevLandingProps{
+    lightMode?:boolean
+}
 
+export default function WebDevLanding({lightMode}:WebDevLandingProps){
 
-
-export default function WebDevLanding(){
-
+    const lightTheme = "text-black bg-gray-400"
 
     const webProjects = [
         {
@@ -33,13 +35,13 @@ export default function WebDevLanding(){
     return(
         <>
 
-                <div className={"mb-4"}>
-                    I build real value <span>PROJECTS</span>
+                <div className={""}>
+                    {/*I build real value <span>PROJECTS</span>*/}
                 </div>
-                <div className={"flex gap-2 flex-col md:flex-row md:gap-10"}>
+                <div className={"flex  gap-2 flex-col md:flex-row md:gap-10"}>
                     {webProjects.map((project, index)=>{
                         return (
-                            <div key={index} className={"rounded-xl hover:scale-105 transition-transform max-w-[450px] max-h-[350px] p-4 bg-gray-800"}>
+                            <div key={index} className={`rounded-xl hover:scale-105 transition-transform max-w-[450px] max-h-[350px] p-4 ${lightMode?lightTheme:"bg-gray-800"}`}>
                                 <img  className={" mb-3 rounded-xl w-full"} src={project.src} alt={""}/>
                                 <div className={"flex justify-between items-center"}>
                                     <div>

@@ -1,12 +1,21 @@
 import {motion} from "framer-motion";
-import folderImg from "../assets/images/white-folder.svg";
+import folderImg from "../../assets/images/white-folder.svg";
+import greyFolderImg from "../../assets/images/grey-folder.svg";
+
 import Typical from "react-typical";
 import {useRef, useState} from "react";
-import WorksPageLayout from "./layouts/WorksPageLayout.tsx";
 import WebDevLanding from "./webDev/WebDevLanding.tsx";
-import NavBar from "./layouts/NavBar.tsx";
+import AboutPage from "./AboutPage.tsx";
 
-export default function WorksPage(){
+
+interface WorkPageProps {
+    lightMode?:boolean
+}
+
+const lightTheme = "text-white bg-gray-400"
+
+
+export default function WorksPage({lightMode}:WorkPageProps){
 
     const [isButtonVisible, setIsButtonVisible] = useState(false);
     const [isWorksClicked, setisWorksClicked] = useState(false);
@@ -18,6 +27,7 @@ export default function WorksPage(){
     const modelRef = useRef<HTMLDivElement | null>(null);
     const webDevRef = useRef<HTMLDivElement | null>(null);
     const animationRef = useRef<HTMLDivElement | null>(null);
+    const aboutRef = useRef<HTMLDivElement | null>(null)
 
 
     const scrollToSection = (ref: React.MutableRefObject<HTMLDivElement | null>) => {
@@ -27,8 +37,8 @@ export default function WorksPage(){
     };
     return(
         <>
-            <WorksPageLayout>
-                <NavBar/>
+
+
                 <div className={" flex flex-col min-h-screen items-center justify-center"}>
                     <audio id={"clickSound"} autoPlay loop  >
                         <source src="/typing-audio.mp3" type="audio/mp3" />
@@ -46,7 +56,7 @@ export default function WorksPage(){
                         >
                             <div className="flex justify-center md:gap-9 items-end mb-14">
                                 {[
-                                    { label: "About", sectionRef: webDevRef },
+                                    { label: "About", sectionRef: aboutRef },
                                     { label: "3D Animation", sectionRef: animationRef },
                                     { label: "Web Development", sectionRef: webDevRef },
                                     { label: "Modeling", sectionRef: modelRef },
@@ -61,7 +71,7 @@ export default function WorksPage(){
                                         >
                                             <p className="text-[10px] md:text-[12px] whitespace-nowrap">{label}</p>
                                             <img
-                                                src={folderImg}
+                                                src={lightMode?greyFolderImg:folderImg}
                                                 alt=""
                                                 className="w-[90px] h-[90px] flex-shrink-0 object-contain"
                                             />
@@ -100,26 +110,31 @@ export default function WorksPage(){
                             wrapper="p"
                             className={"no-cursor"}
                         />
-                        <span className="custom-cursor  leading-none ml-1">█</span>
+                        <span className={`custom-cursor leading-none ml-1 ${lightMode? "text-gray-400":""}`}>█</span>
                     </div>
                     {isButtonVisible && (
                         <button onClick={()=>handleWorks()}
                             // style={{ cursor: `url(${hoveredCursor}), auto` }}
 
-                                className=" bg-white border-2 text-black rounded-md mt-4 text-sm sm:text-3xl md:4xl hover:bg-[black] hover:text-white  cursor-pointer px-4 py-2  duration-40 active:scale-95 transition-transform "
+                                className={`${lightMode? lightTheme: "text-black bg-white"}  border-2  rounded-md mt-4 text-sm sm:text-3xl md:4xl hover:bg-[black] hover:text-white  cursor-pointer px-4 py-2  duration-40 active:scale-95 transition-transform`}
                         > WORKS
                         </button>
                     )}
                 </div>
-                <div className={"my-4 border-2 border-white "}/>
+                <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
 
-                <div className={"min-h-screen  w-full "} ref={webDevRef}>
-                    <WebDevLanding/>
+                <div className={"min-h-screen  w-full"} ref={aboutRef}>
+                    <AboutPage lightMode={lightMode}/>
+                </div>
+                <div className={`my-4 border-2 ${lightMode?" mt-4 mb-4 border-3 border-gray-400":"border-white" } `}/>
+
+            <div className={"min-h-screen  w-full "} ref={webDevRef}>
+                    <WebDevLanding lightMode={lightMode} />
                 </div>
                 {/*<div ref={modelRef}>*/}
                 {/*    <ModelingLanding/>*/}
                 {/*</div>*/}
-            </WorksPageLayout>
+
 
 
         </>

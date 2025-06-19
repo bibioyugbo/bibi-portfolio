@@ -1,6 +1,7 @@
 import Footer from "./Footer.tsx";
 import {motion} from "framer-motion";
-import {ReactNode} from "react";
+import React, {ReactNode, useState} from "react";
+import NavBar from "./NavBar.tsx";
 
 interface WorksPageLayoutProps{
     children: ReactNode
@@ -8,6 +9,15 @@ interface WorksPageLayoutProps{
 
 
 export default function WorksPageLayout({...props}:WorksPageLayoutProps){
+    const [lightMode, setLightMode ] = useState(false)
+
+
+    const toggleTheme = () => {
+        setLightMode(prev => !prev);
+    };
+    const lightTheme = "bg-white text-black"
+
+
     return(
         <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -16,8 +26,10 @@ export default function WorksPageLayout({...props}:WorksPageLayoutProps){
             transition={{ duration: 0.4 }}
         >
 
-            <div className="border-2 rounded-md border-white p-4  bg-black flex flex-col  text-white text-2xl font-mono">
-                {props.children}
+            <div className={`rounded-md  p-4 ${lightMode? lightTheme: "bg-black text-white border-white border-2 "}  flex flex-col   text-2xl font-mono`}>
+                <NavBar lightMode={lightMode} setLightMode={()=>toggleTheme()}/>
+                {React.cloneElement(props.children as React.ReactElement, { lightMode })}
+                {/*{props.children}*/}
                 <Footer/>
             </div>
 

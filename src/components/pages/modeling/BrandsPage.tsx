@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
-import lagosShoot from "../../assets/images/lagos-brand-shoot.png"
-import prettyPrints from "../../assets/images/pretty-prints-2.png"
+import lagosShoot from "../../../assets/images/lagos-brand-shoot.png"
+import prettyPrints from "../../../assets/images/pretty-prints-2.png"
 
 
 export default function BrandsPage(){

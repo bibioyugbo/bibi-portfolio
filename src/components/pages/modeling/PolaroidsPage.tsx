@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import bibiPolaroid from "../../assets/images/bibi-polaroid.jpg"
-import bibiP1 from "../../assets/images/bibip1.jpg"
-import bibiP2 from "../../assets/images/bibip2.jpg"
+import bibiPolaroid from "../../../assets/images/bibi-polaroid.jpg"
+import bibiP1 from "../../../assets/images/bibip1.jpg"
+import bibiP2 from "../../../assets/images/bibip2.jpg"
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {useState} from "react";
