@@ -61,13 +61,14 @@ export default function AboutPage({lightMode}:AboutPageProps){
                                 'text-[#D000FF]';
                 return(
                     <div key={i}
-                         className={`${lightMode ? "bg-gray-400 p-3 my-4 rounded-xl  text-white" : ""} text-[17px]  flex justify-center items-center gap-5`}>
+                         className={`${lightMode ? "bg-gray-400 p-3 my-4 rounded-xl  text-white" : ""} ${i===0 || i===1?"self-start" : "self-end"} text-[17px]  flex justify-center items-center gap-5`}>
 
                         <div className={"h-[160px] w-[160px]"}>
                             <Lottie animationData={item.animation} loop autoplay/>
                         </div>
                         <div className={`max-w-[530px]`}><span
-                            className={`text-[28px] ${spanColor}`}>{item.action}</span> {item.text} </div>
+                            className={`text-[28px] ${spanColor}`}>{item.action}</span> {item.text}
+                        </div>
 
                     </div>
                     )

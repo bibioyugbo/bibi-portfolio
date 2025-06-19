@@ -126,7 +126,7 @@ export default function WorksPage({lightMode}:WorkPageProps){
                 <div className={"min-h-screen  w-full"} ref={aboutRef}>
                     <AboutPage lightMode={lightMode}/>
                 </div>
-                <div className={`my-4 border-2 ${lightMode?" mt-4 mb-4 border-3 border-gray-400":"border-white" } `}/>
+                <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
 
             <div className={"min-h-screen  w-full "} ref={webDevRef}>
                     <WebDevLanding lightMode={lightMode} />
