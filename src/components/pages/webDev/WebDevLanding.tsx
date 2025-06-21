@@ -3,6 +3,9 @@ import dateOrDisaster from "../../../assets/images/date-or-disaster.png"
 import chessGame from "../../../assets/images/chess-game.png"
 import twitterMock from "../../../assets/images/twitter-pic.png"
 import todoApp from "../../../assets/images/todo-app.png"
+import netflixClone from "../../../assets/images/netflix.png"
+
+
 
 
 
@@ -53,10 +56,16 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
             description: "Dating Question Game",
             src: dateOrDisaster,
             liveDemo: "https://date-or-disaster.netlify.app/",
-            github: "https://github.com/bibioyugbo/twitter-game-frontend",
+            github: "https://twitter-additional-features.netlify.app/",
             stackUsed: ["React","Tailwind", "Node.js"]
-
-
+        },
+        {
+            name: "Netflix Clone",
+            description: "Clone of netflix landing page",
+            src: netflixClone,
+            liveDemo: "https://todo-app-jcr3.onrender.com",
+            github: "https://github.com/bibioyugbo/netflix_clone2",
+            stackUsed: ["Vue","HTML","CSS"]
         },
     ]
 
@@ -80,7 +89,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
                                             {project.stackUsed? project.stackUsed.map((item, index)=>{
                                                 return(
 
-                                                    <div key={index} className={"bg-gray-400  mt-2 text-sm rounded-md w-fit p-1"}>{item}</div>
+                                                    <div key={index} className={` ${lightMode?"bg-white":"bg-gray-400" }  mt-2 text-sm rounded-md w-fit p-1`}>{item}</div>
                                                 )
                                             }):""}
                                         </div>
