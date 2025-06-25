@@ -30,7 +30,7 @@ export default function AboutPage({lightMode}:AboutPageProps){
         {
             action: "I Tinker",
             animation: nodejsAnimation,
-            text:"with backend services, APIs, and cloud functions — building what’s needed to make the frontend shine. I'm always exploring ways to deepen my full-stack skills."
+            text:"with backend services, APIs, and cloud functions, building what’s needed to make the frontend shine. I'm always exploring ways to deepen my full-stack skills."
         },
         {
             action: "I Collaborate",
@@ -60,9 +60,7 @@ export default function AboutPage({lightMode}:AboutPageProps){
                             i === 2 ? 'text-[#FFFF33]' :
                                 'text-[#D000FF]';
                 return(
-                    <div key={i}
-                         className={`${lightMode ? "bg-gray-400 p-3 my-4 rounded-xl  text-white" : ""} ${i===0 || i===1?"self-start" : "self-end"} text-[17px]  flex justify-center items-center gap-5`}>
-
+                    <div data-aos="fade-up" key={i} className={`${lightMode ? "bg-gray-400 p-3 my-4 rounded-xl  text-white" : ""} ${i===0 || i===1?"self-start" : "self-end"} text-[17px]  flex justify-center items-center gap-5`}>
                         <div className={"h-[160px] w-[160px]"}>
                             <Lottie animationData={item.animation} loop autoplay/>
                         </div>

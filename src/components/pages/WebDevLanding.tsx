@@ -1,9 +1,9 @@
-import chooselifeSS from "../../../assets/images/chooselife-ss.png"
-import dateOrDisaster from "../../../assets/images/date-or-disaster.png"
-import chessGame from "../../../assets/images/chess-game.png"
-import twitterMock from "../../../assets/images/twitter-pic.png"
-import todoApp from "../../../assets/images/todo-app.png"
-import netflixClone from "../../../assets/images/netflix.png"
+import chooselifeSS from "../../assets/images/chooselife-ss.png"
+import dateOrDisaster from "../../assets/images/date-or-disaster.png"
+import chessGame from "../../assets/images/chess-game.png"
+import twitterMock from "../../assets/images/twitter-pic.png"
+import todoApp from "../../assets/images/todo-app.png"
+import netflixClone from "../../assets/images/netflix.png"
 
 
 
@@ -24,15 +24,16 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
             description: "Wellness solutions provider",
             src: chooselifeSS,
             liveDemo: "https://www.chooselifewellness.co/",
-            stackUsed: ["React","Tailwind"]
+            stackUsed: ["React","Typescript","HTML","Tailwind"]
         },
 
         {
             name: "Chess Multiplayer Game",
             description: "A two player chess game",
             src: chessGame,
-            liveDemo: "https://date-or-disaster.netlify.app/",
-            github: "https://github.com/bibioyugbo/MultiplayerChessGame"
+            liveDemo: "https://interactive-chess-game.netlify.app",
+            github: "https://github.com/bibioyugbo/MultiplayerChessGame",
+            stackUsed: ["React","Node.js","MUI","CSS"]
 
         },
         {
@@ -78,7 +79,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
                 <div className="grid grid-cols-1 mt-4 mb-2 md:grid-cols-3 gap-2 md:gap-10">
                     {webProjects.map((project, index)=>{
                         return (
-                            <div key={index} className={`rounded-xl  max-w-[450px]  p-4 ${lightMode?lightTheme:"bg-gray-800"}`}>
+                            <div data-aos="fade-in"  key={index} className={`rounded-xl  max-w-[450px]  p-4 ${lightMode?lightTheme:"bg-gray-800"}`}>
                                 <img  className={" mb-3 rounded-xl w-full"} src={project.src} alt={""}/>
                                 <div className={"flex justify-between items-center"}>
                                     <div>

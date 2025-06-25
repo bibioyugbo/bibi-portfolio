@@ -4,8 +4,9 @@ import greyFolderImg from "../../assets/images/grey-folder.svg";
 
 import Typical from "react-typical";
 import {useRef, useState} from "react";
-import WebDevLanding from "./webDev/WebDevLanding.tsx";
+import WebDevLanding from "./WebDevLanding.tsx";
 import AboutPage from "./AboutPage.tsx";
+import SkillsPage from "./SkillsPage.tsx";
 
 
 interface WorkPageProps {
@@ -24,9 +25,9 @@ export default function WorksPage({lightMode}:WorkPageProps){
         setisWorksClicked(true)
     }
 
-    const modelRef = useRef<HTMLDivElement | null>(null);
+    const skillsRef = useRef<HTMLDivElement | null>(null);
     const webDevRef = useRef<HTMLDivElement | null>(null);
-    const animationRef = useRef<HTMLDivElement | null>(null);
+    const contactRef = useRef<HTMLDivElement | null>(null);
     const aboutRef = useRef<HTMLDivElement | null>(null)
 
 
@@ -57,9 +58,9 @@ export default function WorksPage({lightMode}:WorkPageProps){
                             <div className="flex justify-center md:gap-9 items-end mb-14">
                                 {[
                                     { label: "About", sectionRef: aboutRef },
-                                    { label: "3D Animation", sectionRef: animationRef },
+                                    { label: "Skills", sectionRef: skillsRef},
                                     { label: "Web Development", sectionRef: webDevRef },
-                                    { label: "Modeling", sectionRef: modelRef },
+                                    { label: "Contact Me", sectionRef: contactRef },
                                 ].map(({ label, sectionRef }, i) => {
                                     const translateClass = i === 0 || i === 3 ? "translate-y-[45px]" : "translate-y-[22px]";
 
@@ -127,10 +128,17 @@ export default function WorksPage({lightMode}:WorkPageProps){
                     <AboutPage lightMode={lightMode}/>
                 </div>
                 <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
-
-            <div className={"min-h-screen  w-full "} ref={webDevRef}>
+                <div className={"min-h-screen  w-full "} ref={skillsRef}>
+                    <SkillsPage lightMode={lightMode} />
+                </div>
+                <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
+                 <div className={"min-h-screen  w-full "} ref={webDevRef}>
                     <WebDevLanding lightMode={lightMode} />
                 </div>
+
+
+
+
                 {/*<div ref={modelRef}>*/}
                 {/*    <ModelingLanding/>*/}
                 {/*</div>*/}
