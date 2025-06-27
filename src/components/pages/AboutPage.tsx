@@ -43,36 +43,32 @@ export default function AboutPage({lightMode}:AboutPageProps){
 
 
     return(
-        <div className={"flex flex-col p-5 justify-center items-center"}>
-            <div className={`${lightMode? lightTheme:"text-white"} text-center`}>/about</div>
+        <div className={"flex flex-col p-5 justify-center "}>
+            <div className={`${lightMode? lightTheme:"text-white"} text-[18px] mb-3 sm:text-2xl text-center`}>/about</div>
             {/*<div className={"text-[18px] text-center py-5"}>*/}
             {/*    I’m a software engineer with over 3 years of experience building for the web.*/}
             {/*    From games and business websites to full-scale e-commerce applications, I’m passionate about bringing ideas to life with clean, thoughtful interfaces and seamless user experiences.*/}
             {/*</div>*/}
+            <div className={"flex flex-col gap-3"}>
+                {aboutContent.map((item, i)=> {
 
+                    const spanColor =
+                        i === 0 ? 'text-[deeppink]' :
+                            i === 1 ? 'text-orange-600' :
+                                i === 2 ? 'text-[#FFFF33]' :
+                                    'text-[#D000FF]';
+                    return(
+                        <div data-aos="fade-up" key={i} className={` flex md:items-center md:justify-center ${lightMode ? "bg-gray-400  p-3 my-4 rounded-xl  text-white" : ""} ${i===0 || i===1?"self-start" : "self-end"}  text-[17px] gap-5`}>
+                            <div className={" h-[160px] w-[160px]"}>
+                                <Lottie animationData={item.animation} loop autoplay/>
+                            </div>
+                            <div className={`text-[12px] md:text-base  md:max-w-[530px]`}><span className={` text-base md:text-[28px] ${spanColor}`}>{item.action}</span> {item.text}</div>
 
-
-            {aboutContent.map((item, i)=> {
-
-                const spanColor =
-                    i === 0 ? 'text-[deeppink]' :
-                        i === 1 ? 'text-orange-600' :
-                            i === 2 ? 'text-[#FFFF33]' :
-                                'text-[#D000FF]';
-                return(
-                    <div data-aos="fade-up" key={i} className={`${lightMode ? "bg-gray-400 p-3 my-4 rounded-xl  text-white" : ""} ${i===0 || i===1?"self-start" : "self-end"} text-[17px]  flex justify-center items-center gap-5`}>
-                        <div className={"h-[160px] w-[160px]"}>
-                            <Lottie animationData={item.animation} loop autoplay/>
                         </div>
-                        <div className={`max-w-[530px]`}><span
-                            className={`text-[28px] ${spanColor}`}>{item.action}</span> {item.text}
-                        </div>
-
-                    </div>
                     )
+                })}
 
-
-            })}
+            </div>
 
         </div>
     )

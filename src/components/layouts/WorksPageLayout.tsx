@@ -26,7 +26,7 @@ export default function WorksPageLayout({...props}:WorksPageLayoutProps){
             transition={{ duration: 0.4 }}
         >
 
-            <div className={`rounded-md  p-4 ${lightMode? lightTheme: "bg-black text-white border-white border-2 "}  flex flex-col   text-2xl font-mono`}>
+            <div className={`rounded-md  p-4 ${lightMode? lightTheme: "bg-black text-white border-white border-2 "}  flex flex-col w-full    text-2xl font-mono`}>
                 <NavBar lightMode={lightMode} setLightMode={()=>toggleTheme()}/>
                 {React.cloneElement(props.children as React.ReactElement, { lightMode })}
                 {/*{props.children}*/}

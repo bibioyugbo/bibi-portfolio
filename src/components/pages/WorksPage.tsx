@@ -38,8 +38,6 @@ export default function WorksPage({lightMode}:WorkPageProps){
     };
     return(
         <>
-
-
                 <div className={" flex flex-col min-h-screen items-center justify-center"}>
                     <audio id={"clickSound"} autoPlay loop  >
                         <source src="/typing-audio.mp3" type="audio/mp3" />
@@ -62,7 +60,7 @@ export default function WorksPage({lightMode}:WorkPageProps){
                                     { label: "Web Development", sectionRef: webDevRef },
                                     { label: "Contact Me", sectionRef: contactRef },
                                 ].map(({ label, sectionRef }, i) => {
-                                    const translateClass = i === 0 || i === 3 ? "translate-y-[45px]" : "translate-y-[22px]";
+                                    const translateClass = i === 0 || i === 3 ? "translate-y-[48px]" : "translate-y-[15px]";
 
                                     return (
                                         <button
@@ -124,11 +122,11 @@ export default function WorksPage({lightMode}:WorkPageProps){
                 </div>
                 <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
 
-                <div className={"min-h-screen  w-full"} ref={aboutRef}>
+                <div className={"md:min-h-screen  w-full"} ref={aboutRef}>
                     <AboutPage lightMode={lightMode}/>
                 </div>
                 <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
-                <div className={"min-h-screen  w-full "} ref={skillsRef}>
+                <div className={"md:min-h-screen  w-full "} ref={skillsRef}>
                     <SkillsPage lightMode={lightMode} />
                 </div>
                 <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
