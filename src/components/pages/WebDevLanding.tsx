@@ -20,8 +20,8 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
 
     const webProjects = [
         {
-            name: "Chooselife",
-            description: "Wellness solutions provider",
+            name: "Chooselife Wellness",
+            description: "Wellness solutions platform that gives individuals and organizations analytics and progress reports on wellness performance",
             src: chooselifeSS,
             liveDemo: "https://www.chooselifewellness.co/",
             stackUsed: ["React","Typescript","HTML","Tailwind"]
@@ -29,7 +29,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
 
         {
             name: "Chess Multiplayer Game",
-            description: "A two player chess game",
+            description: "Two player chess game that can be simulated with two different web browsers",
             src: chessGame,
             liveDemo: "https://interactive-chess-game.netlify.app",
             github: "https://github.com/bibioyugbo/MultiplayerChessGame",
@@ -37,8 +37,8 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
 
         },
         {
-            name: "Twitter What-Ifs",
-            description: "Twitter If It has additional features",
+            name: "X Re-imagined",
+            description: "Cloned section of X with experimental features such as voice to tweet feature and mass block feature",
             src: twitterMock,
             liveDemo: "https://date-or-disaster.netlify.app/",
             github: "https://github.com/bibioyugbo/twitter-mass-block-feature",
@@ -46,7 +46,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
         },
         {
             name: "To-do Application",
-            description: "Application to add, edit and delete list of tasks",
+            description: "NodeJs application to keep track of user-specific tasks",
             src: todoApp,
             liveDemo: "https://todo-app-jcr3.onrender.com",
             github: "https://github.com/bibioyugbo/todo-app",
@@ -54,7 +54,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
         },
         {
             name: "Date or Disaster",
-            description: "Dating Question Game",
+            description: "A fun dating question game that decides whether your match is a perfect date or a total disaster, based on the answers you choose",
             src: dateOrDisaster,
             liveDemo: "https://date-or-disaster.netlify.app/",
             github: "https://twitter-additional-features.netlify.app/",
@@ -62,7 +62,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
         },
         {
             name: "Netflix Clone",
-            description: "Clone of netflix landing page",
+            description: "A responsive replica of Netflix's landing page, built to showcase modern UI design, layout precision, and responsive styling",
             src: netflixClone,
             liveDemo: "https://todo-app-jcr3.onrender.com",
             github: "https://github.com/bibioyugbo/netflix_clone2",
@@ -76,17 +76,17 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
                 <div className={`${lightMode? "text-gray-400":"text-white"} text-center`}>
                     /projects
                 </div>
-                <div className="grid grid-cols-1 mt-4 mb-2 md:grid-cols-3 gap-2 md:gap-10">
+                <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-6 mb-2 xl:grid-cols-3  md:gap-10">
                     {webProjects.map((project, index)=>{
                         return (
-                            <div data-aos="fade-in"  key={index} className={`rounded-xl  max-w-[450px]  p-4 ${lightMode?lightTheme:"bg-gray-800"}`}>
+                            <div data-aos="fade-in"  key={index} className={`rounded-xl p-4 ${lightMode?lightTheme:"bg-gray-800"}`}>
                                 <img  className={" mb-3 rounded-xl w-full"} src={project.src} alt={""}/>
-                                <div className={"flex justify-between items-center"}>
+                                <div className={"flex gap-5 items-center"}>
                                     <div>
-                                        <div>{project.name}</div>
-                                        <div className={"text-sm"}>{project.description}</div>
+                                        <div className={"text-[20px] xl:text-2xl "}>{project.name}</div>
+                                        <div className={"text-sm my-3  max-w-[300px]"}>{project.description}</div>
 
-                                        <div className={"flex gap-2"}>
+                                        <div className={"flex flex-wrap gap-2"}>
                                             {project.stackUsed? project.stackUsed.map((item, index)=>{
                                                 return(
 
@@ -97,8 +97,8 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
 
                                     </div>
                                     <div className={"flex items-center justify-center gap-3"}>
-                                        {project.github && <a target="_blank" className={"hover:scale-110 transition-transform"} rel="noopener noreferrer" href={project.github}>   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="#fff" d="M2 12h2v-1H3v-1H2V9H1V8h1v1h1v1h1V9h1V8H3V7H2V4h1V2h1v1h3V2h1v2h1v3H8v1H6v1h1v3h2v-1h1v-1h1V3h-1V2H9V1H2v1H1v1H0v7h1v1h1Zm0 0"/></svg></a>}
-                                        <a className={"hover:scale-110 transition-transform"}  target="_blank" rel="noopener noreferrer" href={project.liveDemo}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg></a>
+                                        {project.github && <a target="_blank" className={"hover:scale-115 transition-transform"} rel="noopener noreferrer" href={project.github}>   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="#fff" d="M2 12h2v-1H3v-1H2V9H1V8h1v1h1v1h1V9h1V8H3V7H2V4h1V2h1v1h3V2h1v2h1v3H8v1H6v1h1v3h2v-1h1v-1h1V3h-1V2H9V1H2v1H1v1H0v7h1v1h1Zm0 0"/></svg></a>}
+                                        <a className={"hover:scale-115 transition-transform"}  target="_blank" rel="noopener noreferrer" href={project.liveDemo}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg></a>
                                     </div>
                                 </div>
                             </div>
