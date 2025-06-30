@@ -1,8 +1,8 @@
 import Lottie from 'lottie-react';
-import designAnimation from '../animations/design.json'
-import buildAnimation from '../animations/build.json'
-import nodejsAnimation from '../animations/nodejs.json'
-import collabAnimation from '../animations/collabo.json'
+import designAnimation from '../../animations/design.json'
+import buildAnimation from '../../animations/build.json'
+import nodejsAnimation from '../../animations/nodejs.json'
+import collabAnimation from '../../animations/collabo.json'
 
 
 
@@ -28,7 +28,7 @@ export default function AboutPage({lightMode}:AboutPageProps){
             text:"scalable, interactive web applications using React, TypeScript, and modern tooling. I care deeply about performance, maintainability, and clean architecture"
         },
         {
-            action: "I Tinker",
+            action: "I Implement",
             animation: nodejsAnimation,
             text:"with backend services, APIs, and cloud functions, building what’s needed to make the frontend shine. I'm always exploring ways to deepen my full-stack skills."
         },

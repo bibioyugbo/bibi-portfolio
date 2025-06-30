@@ -1,4 +1,4 @@
-import LandingPage from "../components/pages/LandingPage.tsx";
+import LandingPage from "../components/pages/landing/LandingPage.tsx";
 
 export default function LandingPageView(){
     return(

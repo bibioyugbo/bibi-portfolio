@@ -1,9 +1,9 @@
-import chooselifeSS from "../../assets/images/chooselife-ss.png"
-import dateOrDisaster from "../../assets/images/date-or-disaster.png"
-import chessGame from "../../assets/images/chess-game.png"
-import twitterMock from "../../assets/images/twitter-pic.png"
-import todoApp from "../../assets/images/todo-app.png"
-import netflixClone from "../../assets/images/netflix.png"
+import chooselifeSS from "../../../assets/images/chooselife-ss.png"
+import dateOrDisaster from "../../../assets/images/date-or-disaster.png"
+import chessGame from "../../../assets/images/chess-game.png"
+import twitterMock from "../../../assets/images/twitter-pic.png"
+import todoApp from "../../../assets/images/todo-app.png"
+import netflixClone from "../../../assets/images/netflix.png"
 
 
 

@@ -1,13 +1,13 @@
-import htmlIcon from "../../assets/images/html.svg";
-import cssIcon from "../../assets/images/css.svg";
-import javaScriptIcon from "../../assets/images/javascript.svg";
-import reactIcon from "../../assets/images/react.svg";
-import gitIcon from "../../assets/images/git.svg";
-import awsIcon from "../../assets/images/aws.svg";
-import expressIcon from "../../assets/images/expresss.svg";
-import vueIcon from "../../assets/images/vuejs.svg";
-import tailWindIcon from "../../assets/images/tailwind.svg";
-import typeScriptIcon from "../../assets/images/typescript.svg";
+import htmlIcon from "../../../assets/images/html.svg";
+import cssIcon from "../../../assets/images/css.svg";
+import javaScriptIcon from "../../../assets/images/javascript.svg";
+import reactIcon from "../../../assets/images/react.svg";
+import gitIcon from "../../../assets/images/git.svg";
+import awsIcon from "../../../assets/images/aws.svg";
+import expressIcon from "../../../assets/images/expresss.svg";
+import vueIcon from "../../../assets/images/vuejs.svg";
+import tailWindIcon from "../../../assets/images/tailwind.svg";
+import typeScriptIcon from "../../../assets/images/typescript.svg";
 import {useEffect, useRef, useState} from "react";
 
 interface SkillsPageProps {

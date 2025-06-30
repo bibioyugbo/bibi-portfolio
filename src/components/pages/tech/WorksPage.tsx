@@ -1,12 +1,12 @@
 import {motion} from "framer-motion";
-import folderImg from "../../assets/images/white-folder.svg";
-import greyFolderImg from "../../assets/images/grey-folder.svg";
-
+import folderImg from "../../../assets/images/white-folder.svg";
+import greyFolderImg from "../../../assets/images/grey-folder.svg";
 import Typical from "react-typical";
 import {useRef, useState} from "react";
 import WebDevLanding from "./WebDevLanding.tsx";
 import AboutPage from "./AboutPage.tsx";
 import SkillsPage from "./SkillsPage.tsx";
+import ContactPage from "./ContactPage.tsx";
 
 
 interface WorkPageProps {
@@ -132,6 +132,10 @@ export default function WorksPage({lightMode}:WorkPageProps){
                 <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
                  <div className={"min-h-screen  w-full "} ref={webDevRef}>
                     <WebDevLanding lightMode={lightMode} />
+                </div>
+                <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
+                <div className={"min-h-screen    "} ref={contactRef}>
+                    <ContactPage lightMode={lightMode}/>
                 </div>
 
 
