@@ -17,7 +17,7 @@ interface SkillsPageProps {
 export default function SkillsPage({ lightMode }: SkillsPageProps) {
     const [containerSize, setContainerSize] = useState(500);
     const [radius, setRadius] = useState(300);
-    const lightTheme = "text-black";
+    const lightTheme = "text-gray-400";
     const containerRef = useRef<HTMLDivElement>(null);
 
 

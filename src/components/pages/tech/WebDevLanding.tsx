@@ -16,7 +16,7 @@ interface WebDevLandingProps{
 
 export default function WebDevLanding({lightMode}:WebDevLandingProps){
 
-    const lightTheme = "text-black bg-gray-400"
+    const lightTheme = "text-black border-2 border-gray-400"
 
     const webProjects = [
         {
@@ -90,7 +90,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
                                             {project.stackUsed? project.stackUsed.map((item, index)=>{
                                                 return(
 
-                                                    <div key={index} className={` ${lightMode?"bg-white":"bg-gray-400" }  mt-2 text-sm rounded-md w-fit p-1`}>{item}</div>
+                                                    <div key={index} className={` ${lightMode?"bg-black text-white":"bg-gray-400" }  mt-2 text-sm rounded-md w-fit p-1`}>{item}</div>
                                                 )
                                             }):""}
                                         </div>

@@ -30,7 +30,7 @@ export default function AboutPage({lightMode}:AboutPageProps){
         {
             action: "I Implement",
             animation: nodejsAnimation,
-            text:"with backend services, APIs, and cloud functions, building what’s needed to make the frontend shine. I'm always exploring ways to deepen my full-stack skills."
+            text:"backend services, APIs, and cloud functions, building what’s needed to make the frontend shine. I'm always exploring ways to deepen my full-stack skills."
         },
         {
             action: "I Collaborate",
@@ -58,8 +58,8 @@ export default function AboutPage({lightMode}:AboutPageProps){
                                 i === 2 ? 'text-[#FFFF33]' :
                                     'text-[#D000FF]';
                     return(
-                        <div data-aos="fade-up" key={i} className={` flex md:items-center md:justify-center ${lightMode ? "bg-gray-400  p-3 my-4 rounded-xl  text-white" : ""} ${i===0 || i===1?"self-start" : "self-end"}  text-[17px] gap-5`}>
-                            <div className={" h-[160px] w-[160px]"}>
+                        <div data-aos="fade-up" key={i} className={` flex flex-col items-center md:!flex-row md:items-center md:justify-center ${lightMode ? "bg-gray-400  p-3 my-4 rounded-xl  text-white" : ""} ${i===0 || i===1?"self-start" : "self-end"}  text-[17px] gap-5`}>
+                            <div className={`${i===3? "h-[160px] pt-5":"h-[120px]"} md:h-[160px] w-[140px] md:w-[160px]`}>
                                 <Lottie animationData={item.animation} loop autoplay/>
                             </div>
                             <div className={`text-[12px] md:text-base  md:max-w-[530px]`}><span className={` text-base md:text-[28px] ${spanColor}`}>{item.action}</span> {item.text}</div>
