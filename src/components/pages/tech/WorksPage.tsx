@@ -107,19 +107,31 @@ export default function WorksPage({lightMode}:WorkPageProps){
                     </div>
                     {isButtonVisible && (
                         <>
-                            <div className={`${isWorksClicked ? "hidden" : "flex flex-col absolute top-[460px] left-[560px]"}`}>
-                                <div className="h-[80px] w-[80px]">
-                                    <img src={lightMode ? arrowMute : arrowMute2} alt="" />
+                            <div
+                                className={`${
+                                    isWorksClicked ? "hidden" : "flex flex-col items-center"
+                                } relative z-10
+                                  ${lightMode ? "-translate-x-30 translate-y-30" : "translate-x-0 translate-y-50"}
+                              `}
+                            >
+                                <div className="w-12 h-12 sm:w-16 sm:h-16">
+                                    <img
+                                        src={lightMode ? arrowMute : arrowMute2}
+                                        alt=""
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
-                                <div className={`max-w-[200px] text-sm text-center border rounded-md p-3
-                        ${lightMode
-                                    ? "bg-white/30 border-black text-black"
-                                    : "bg-black border-white text-white"
-                                }`}>
+                                <div
+                                    className={`max-w-[200px] text-xs sm:text-sm text-center border rounded-md p-2 sm:p-3
+      ${
+                                        lightMode
+                                            ? "bg-white/30 border-black text-black"
+                                            : "bg-black border-white text-white"
+                                    }`}
+                                >
                                     Click here
                                 </div>
                             </div>
-
                             <button onClick={()=>handleWorks()}
                                     className={`${lightMode? lightTheme: "text-black bg-white"}  border-2  rounded-md mt-4 text-sm sm:text-3xl md:4xl hover:bg-[black] hover:text-white  cursor-pointer px-4 py-2  duration-40 active:scale-95 transition-transform`}
                             > WORKS
