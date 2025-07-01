@@ -7,6 +7,9 @@ import WebDevLanding from "./WebDevLanding.tsx";
 import AboutPage from "./AboutPage.tsx";
 import SkillsPage from "./SkillsPage.tsx";
 import ContactPage from "./ContactPage.tsx";
+import arrowMute from "../../../assets/images/spiral-arrow-removebg-preview.png";
+import arrowMute2 from "../../../assets/images/white-arrow-up-removebg-preview.png";
+
 
 
 interface WorkPageProps {
@@ -21,10 +24,14 @@ export default function WorksPage({lightMode}:WorkPageProps){
     const [isButtonVisible, setIsButtonVisible] = useState(false);
     const [isWorksClicked, setisWorksClicked] = useState(false);
 
+    function handleMute() {
+        const sound = document.getElementById('clickSound') as HTMLAudioElement;
+        sound.currentTime = 0;  // Reset to start for repeated taps
+        sound.pause();
+    }
     function handleWorks(){
         setisWorksClicked(true)
     }
-
     const skillsRef = useRef<HTMLDivElement | null>(null);
     const webDevRef = useRef<HTMLDivElement | null>(null);
     const contactRef = useRef<HTMLDivElement | null>(null);
@@ -38,14 +45,16 @@ export default function WorksPage({lightMode}:WorkPageProps){
     };
     return(
         <>
-                <div className={" flex flex-col min-h-screen items-center justify-center"}>
-                    <audio id={"clickSound"} autoPlay loop  >
+                <div id={"works-section"} className={"relative  flex flex-col min-h-screen items-center justify-center"}>
+                    <audio id={"clickSound"} autoPlay loop >
                         <source src="/typing-audio.mp3" type="audio/mp3" />
                         Your browser does not support the audio element.
                     </audio>
                     <audio>
                         <source src={"/click-sound.ogg"} type={"audio/ogg"}/>
                     </audio>
+
+
                     { isWorksClicked &&
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -78,46 +87,45 @@ export default function WorksPage({lightMode}:WorkPageProps){
                                     );
                                 })}
                             </div>
-
-                            {/*<div className="flex justify-center items-end gap-9 mb-14">*/}
-                            {/*    <div onClick={()=>scrollToSection(webDevRef)}  className="flex flex-col items-center translate-y-[45px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">*/}
-                            {/*        <p className="text-[10px] text-nowrap md:text-[12px]">About</p>*/}
-                            {/*        <img src={folderImg} height={90} width={90} alt="" />*/}
-                            {/*    </div>*/}
-                            {/*    <div onClick={()=>scrollToSection(animationRef)}   className="flex flex-col items-center translate-y-[22px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">*/}
-                            {/*        <p className="text-[10px] text-nowrap md:text-[12px]">3D Animation</p>*/}
-                            {/*        <img src={folderImg} height={90} width={90} alt="" />*/}
-                            {/*    </div>*/}
-                            {/*    <div onClick={()=>scrollToSection(webDevRef)}  className="flex w-[90px] h-[90px] flex-col items-center translate-y-[22px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">*/}
-                            {/*        <p className="text-[10px] text-nowrap md:text-[12px]">Web Development</p>*/}
-                            {/*        <img className={"w-[90px] h-[90px]"} src={folderImg} height={90} width={90} alt="" />*/}
-                            {/*    </div>*/}
-                            {/*    <div onClick={()=>scrollToSection(modelRef)}  className="flex flex-col items-center translate-y-[45px] hover:scale-105 hover:brightness-80 transition-all duration-300 ease-in-out cursor-pointer">*/}
-                            {/*        <p className="text-[10px] text-nowrap md:text-[12px]">Modeling</p>*/}
-                            {/*        <img src={folderImg} height={90} width={90} alt="" />*/}
-                            {/*    </div>*/}
-                            {/*</div>*/}
                         </motion.div>
                     }
                     <div className="flex text-sm sm:text-2xl">
                         <Typical
                             steps={['WELCOME TO BIBI\'S WORLD',
-                                1000, (() => setIsButtonVisible(true)) as unknown as string,
+                                1000, (() => {
+                                    setIsButtonVisible(true)
+                                    handleMute()
+                                }) as unknown as string,
                                 500,
                             ]}
                             // loop={Infinity}
                             wrapper="p"
                             className={"no-cursor"}
                         />
+
                         <span className={`custom-cursor leading-none ml-1 ${lightMode? "text-gray-400":""}`}>█</span>
                     </div>
                     {isButtonVisible && (
-                        <button onClick={()=>handleWorks()}
-                            // style={{ cursor: `url(${hoveredCursor}), auto` }}
+                        <>
+                            <div className={`${isWorksClicked ? "hidden" : "flex flex-col absolute top-[460px] left-[560px]"}`}>
+                                <div className="h-[80px] w-[80px]">
+                                    <img src={lightMode ? arrowMute : arrowMute2} alt="" />
+                                </div>
+                                <div className={`max-w-[200px] text-sm text-center border rounded-md p-3
+                        ${lightMode
+                                    ? "bg-white/30 border-black text-black"
+                                    : "bg-black border-white text-white"
+                                }`}>
+                                    Click here
+                                </div>
+                            </div>
 
-                                className={`${lightMode? lightTheme: "text-black bg-white"}  border-2  rounded-md mt-4 text-sm sm:text-3xl md:4xl hover:bg-[black] hover:text-white  cursor-pointer px-4 py-2  duration-40 active:scale-95 transition-transform`}
-                        > WORKS
-                        </button>
+                            <button onClick={()=>handleWorks()}
+                                    className={`${lightMode? lightTheme: "text-black bg-white"}  border-2  rounded-md mt-4 text-sm sm:text-3xl md:4xl hover:bg-[black] hover:text-white  cursor-pointer px-4 py-2  duration-40 active:scale-95 transition-transform`}
+                            > WORKS
+                            </button>
+                        </>
+
                     )}
                 </div>
                 <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
@@ -134,7 +142,7 @@ export default function WorksPage({lightMode}:WorkPageProps){
                     <WebDevLanding lightMode={lightMode} />
                 </div>
                 <div className={`my-4 border-2 ${lightMode?" border-3 border-gray-400":"border-white" } `}/>
-                <div className={"min-h-screen    "} ref={contactRef}>
+                <div className={"min-h-screen"} ref={contactRef}>
                     <ContactPage lightMode={lightMode}/>
                 </div>
 

@@ -5,6 +5,7 @@ import NavBar from "./NavBar.tsx";
 
 interface WorksPageLayoutProps{
     children: ReactNode
+    onClick : ()=>void
 }
 
 
@@ -30,7 +31,7 @@ export default function WorksPageLayout({...props}:WorksPageLayoutProps){
                 <NavBar lightMode={lightMode} setLightMode={()=>toggleTheme()}/>
                 {React.cloneElement(props.children as React.ReactElement, { lightMode })}
                 {/*{props.children}*/}
-                <Footer/>
+                <Footer onClick={()=>props.onClick()} lightMode={lightMode}/>
             </div>
 
         </motion.div>

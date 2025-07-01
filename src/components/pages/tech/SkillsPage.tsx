@@ -81,7 +81,7 @@ export default function SkillsPage({ lightMode }: SkillsPageProps) {
                             }}
                         >
                             <img src={icon.svg} alt={icon.name} className="w-12 h-12" />
-                            <span className={`mt-1 ${lightMode? lightTheme : "text-white"}`}>{icon.name}</span>
+                            <span className={`mt-1 ${lightMode? "text-black" : "text-white"}`}>{icon.name}</span>
                         </div>
                     );
                 })}

@@ -6,16 +6,18 @@ import {useEffect, useState} from "react";
 
 export default function LandingPage() {
     const navigate = useNavigate()
+    const [index, setIndex] = useState(0);
+
 
     function playClickSound() {
         const sound = document.getElementById('clickSound') as HTMLAudioElement;
         sound.currentTime = 0;  // Reset to start for repeated taps
         sound.play();
     }
-
     function handleStart() {
+        // localStorage.setItem('soundUnlocked', 'true');
         navigate(RouteConstant.dashboard.works.path)
-        playClickSound(); // this runs immediately, which is fine if it's independent
+        playClickSound()
     }
     const items = [
         { text: "a Frontend Engineer", color: "text-pink-400", border: "border-pink-400", bg: "bg-pink-400" },
@@ -24,7 +26,7 @@ export default function LandingPage() {
         { text: "a Model", color: "text-yellow-400", border: "border-yellow-400", bg: "bg-yellow-400" },
     ];
 
-    const [index, setIndex] = useState(0);
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -41,6 +43,7 @@ export default function LandingPage() {
                             exit={{ opacity: 0, x: 50 }}
                             transition={{ duration: 0.4, ease: 'easeInOut' }}
                         >
+
                             <div className={"start-background gap-15 "}>
                                 <div className="text-white font-bold text-[18px] sm:text-3xl md:text-3xl lg:text-4xl tracking-wider flex items-center gap-4">
                                     <span>Hello! I'm Obehioye,</span>
