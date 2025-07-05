@@ -38,9 +38,9 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
         },
         {
             name: "X Re-imagined",
-            description: "Cloned section of X with experimental features such as voice to tweet feature and mass block feature",
+            description: "Cloned section of X with experimental features such as speech to tweet feature and mass block feature",
             src: twitterMock,
-            liveDemo: "https://date-or-disaster.netlify.app/",
+            liveDemo: "https://x-reimagined.netlify.app/",
             github: "https://github.com/bibioyugbo/twitter-mass-block-feature",
             stackUsed: ["React","HTML","CSS"]
         },
