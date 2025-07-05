@@ -17,6 +17,8 @@ interface SkillsPageProps {
 export default function SkillsPage({ lightMode }: SkillsPageProps) {
     const [containerSize, setContainerSize] = useState(500);
     const [radius, setRadius] = useState(300);
+    const [shake, setShake] = useState(false);
+
     const lightTheme = "text-gray-400";
     const containerRef = useRef<HTMLDivElement>(null);
 
@@ -56,7 +58,7 @@ export default function SkillsPage({ lightMode }: SkillsPageProps) {
 
     return (
         <div className=" w-full h-[700px] mt-5  flex justify-center relative  items-center">
-            <div ref={containerRef} className="  hover:scale-105 transition-transform w-[400px] h-[400px] md:w-[500px]  md:h-[500px]">
+            <div onClick={()=>setShake(!shake)}  ref={containerRef} className={`${shake? "shake":""} hover:scale-105 transition-transform w-[400px] h-[400px] md:w-[500px]  md:h-[500px]`}>
                 {/* Circle of Icons */}
                 {icons.map((icon, i) => {
                     // const isMobile = window.innerWidth < 768;

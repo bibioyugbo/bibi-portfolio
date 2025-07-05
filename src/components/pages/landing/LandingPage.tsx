@@ -18,6 +18,7 @@ export default function LandingPage() {
         // localStorage.setItem('soundUnlocked', 'true');
         navigate(RouteConstant.dashboard.works.path)
         playClickSound()
+
     }
     const items = [
         { text: "a Frontend Engineer", color: "text-pink-400", border: "border-pink-400", bg: "bg-pink-400" },
