@@ -46,7 +46,7 @@ export default function LandingPage() {
                         >
 
                             <div className={"start-background gap-15 "}>
-                                <div className="text-white font-bold text-[18px] sm:text-3xl md:text-3xl lg:text-4xl tracking-wider flex items-center gap-4">
+                                <div className="text-white font-bold text-[16px] sm:text-3xl md:text-3xl lg:text-4xl tracking-wider flex items-center gap-4">
                                     <span>Hello! I'm Obehioye,</span>
                                     <AnimatePresence mode="wait">
                                         <motion.span

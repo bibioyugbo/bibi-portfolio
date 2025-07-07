@@ -85,6 +85,7 @@ html{
 }
 .start-background{
     display:flex;
+    padding:15px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
