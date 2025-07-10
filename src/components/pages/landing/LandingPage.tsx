@@ -23,8 +23,8 @@ export default function LandingPage() {
     const items = [
         { text: "a Frontend Engineer", color: "text-pink-400", border: "border-pink-400", bg: "bg-pink-400" },
         { text: "a Backend Engineer", color: "text-blue-400", border: "border-blue-400", bg: "bg-blue-400" },
-        { text: "a 3D designer", color: "text-purple-400", border: "border-purple-400", bg: "bg-purple-400" },
-        { text: "a Model", color: "text-yellow-400", border: "border-yellow-400", bg: "bg-yellow-400" },
+        // { text: "a 3D designer", color: "text-purple-400", border: "border-purple-400", bg: "bg-purple-400" },
+        // { text: "a Model", color: "text-yellow-400", border: "border-yellow-400", bg: "bg-yellow-400" },
     ];
 
 
