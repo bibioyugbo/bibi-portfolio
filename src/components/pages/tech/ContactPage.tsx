@@ -38,7 +38,7 @@ export default function ContactPage({lightMode}:ContactPageProps){
                        <input type="email" name="email" />
                        <textarea name="message" />
                    </form>
-                   <form  className={"h-full w-full mt-10 flex gap-5 flex-col"}  name="contact" method="POST" data-netlify="true">
+                   <form  className={"h-full w-full mt-10 flex gap-5 flex-col"} netlify-honeypot="bot-field"  name="contact" method="POST" data-netlify="true">
                        <label className={"text-xl"}>Name</label>
                        <input className={`${lightMode?"border-black":"border-white"} border-2 p-3 text-[18px] rounded-md`} type="text" name="name" required />
                        <label className={"text-xl"}>Email</label>
