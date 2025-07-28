@@ -7,7 +7,7 @@ export default function Footer({lightMode, onClick}:FooterProps){
 
 
     return(
-        <footer className={"text-sm flex items-center gap-2 justify-center  p-4 sticky bottom-0 text-center"}>
+        <footer className={`${lightMode? "bg-white/30 backdrop-blur" : "bg-black/30 backdrop-blur"} text-sm flex  items-center gap-2 justify-center  p-4 sticky bottom-0 text-center`}>
             <div>
                 © 2025 OBEHIOYE OYUGBO
             </div>
