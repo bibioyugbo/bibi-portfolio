@@ -39,6 +39,7 @@ export default function ContactPage({lightMode}:ContactPageProps){
                        <label className={"text-xl"}>Email</label>
                        <input  className={`${lightMode?"border-black":"border-white"} border-2 p-3 text-[18px] rounded-md`}  type="email" name="email" required />
                        <label className={"text-xl"}>Message</label>
+                       <input type="hidden" name="form-name" value="contact" />
                        <textarea  className={`${lightMode?"border-black":"border-white"} border-2 p-3 h-[300px] text-[18px] rounded-md`} name="message" required></textarea>
                        <div className={"flex gap-2 justify-between mt-4 items-center"}>
                            <button className={`${lightMode? lightTheme: "text-black bg-white"}  border-2 max-w-[250px] rounded-md text-sm sm:text-2xl  border-white hover:bg-[black] hover:text-white  cursor-pointer px-4 py-2  duration-40 active:scale-95 transition-transform`} type="submit">Send</button>
