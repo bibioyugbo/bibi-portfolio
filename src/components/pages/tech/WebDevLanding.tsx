@@ -1,4 +1,4 @@
-import chooselifeSS from "../../../assets/images/chooselife-ss.png"
+import popSpace from "../../../assets/images/popspace-img.png"
 import dateOrDisaster from "../../../assets/images/date-or-disaster.png"
 import chessGame from "../../../assets/images/chess-game.png"
 import twitterMock from "../../../assets/images/twitter-pic.png"
@@ -32,7 +32,7 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
         {
             name: "Popspace Social Media App",
             description: "Space for connecting all creatives all over the world for collaborations ad paid gigs. Picture LinkedIn and Instagram have a baby ",
-            src: chooselifeSS,
+            src:popSpace,
             liveDemo: "https://popspace.netlify.app/",
             stackUsed: ["Next.js","Typescript","HTML","Tailwind"]
         },

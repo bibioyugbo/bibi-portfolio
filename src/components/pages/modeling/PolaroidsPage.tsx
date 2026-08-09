@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import bibiPolaroid from "../../../assets/images/bibi-polaroid.jpg"
+// import bibiPolaroid from "../../../assets/images/bibi-polaroid.jpg"
 import bibiP1 from "../../../assets/images/bibip1.jpg"
 import bibiP2 from "../../../assets/images/bibip2.jpg"
 import { Carousel } from 'react-responsive-carousel';
@@ -34,7 +34,7 @@ export default function PolaroidsPage(){
     //     }
     // }, [vantaEffect])
 
-    const openNewPolaroid = () => setIsOpen(true);
+    // const openNewPolaroid = () => setIsOpen(true);
     const closeModal = () => setIsOpen(false);
     const polaroids =[
         bibiP1,
@@ -49,7 +49,7 @@ export default function PolaroidsPage(){
                          transition={{ duration: 0.4, ease: 'easeInOut' }}
             >
             <div className={"bg-white z-0 flex justify-center "}>
-                    <img onClick={openNewPolaroid}  src={bibiPolaroid} alt={""} width={500} height={400}/>
+                    {/*<img onClick={openNewPolaroid}  src={bibiPolaroid} alt={""} width={500} height={400}/>*/}
             </div>
                 {isOpen && (
                     <div className="fixed inset-0 z-[9999]  flex justify-center items-center">
