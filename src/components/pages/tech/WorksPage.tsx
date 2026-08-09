@@ -7,7 +7,7 @@ import WebDevLanding from "./WebDevLanding.tsx";
 import AboutPage from "./AboutPage.tsx";
 import SkillsPage from "./SkillsPage.tsx";
 import ContactPage from "./ContactPage.tsx";
-import arrowMute from "../../../assets/images/spiral-arrow-removebg-preview.png";
+import arrowMute from "../../../assets/images/spiral-arrow-mute.png";
 import arrowMute2 from "../../../assets/images/white-arrow-up-removebg-preview.png";
 
 

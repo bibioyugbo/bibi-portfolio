@@ -1,4 +1,4 @@
-import chooselifeSS from "../../../assets/images/chooselife-ss.png"
+import popSpace from "../../../assets/images/popspace-img.png"
 import dateOrDisaster from "../../../assets/images/date-or-disaster.png"
 import chessGame from "../../../assets/images/chess-game.png"
 import twitterMock from "../../../assets/images/twitter-pic.png"
@@ -19,13 +19,6 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
     const lightTheme = "text-black border-2 border-gray-400"
 
     const webProjects = [
-        {
-            name: "Chooselife Wellness",
-            description: "Wellness solutions platform that gives individuals and organizations analytics and progress reports on wellness performance",
-            src: chooselifeSS,
-            liveDemo: "https://www.chooselifewellness.co/",
-            stackUsed: ["React","Typescript","HTML","Tailwind"]
-        },
 
         {
             name: "Chess Multiplayer Game",
@@ -35,6 +28,13 @@ export default function WebDevLanding({lightMode}:WebDevLandingProps){
             github: "https://github.com/bibioyugbo/MultiplayerChessGame",
             stackUsed: ["React","Node.js","MUIv6","CSS"]
 
+        },
+        {
+            name: "Popspace Social Media App",
+            description: "Space for connecting all creatives all over the world for collaborations ad paid gigs. Picture LinkedIn and Instagram have a baby ",
+            src:popSpace,
+            liveDemo: "https://popspace.netlify.app/",
+            stackUsed: ["Next.js","Typescript","HTML","Tailwind"]
         },
         {
             name: "X Re-imagined",
