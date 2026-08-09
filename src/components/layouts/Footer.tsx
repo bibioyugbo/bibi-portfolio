@@ -9,7 +9,7 @@ export default function Footer({lightMode, onClick}:FooterProps){
     return(
         <footer className={`${lightMode? "bg-white/30 backdrop-blur" : "bg-black/30 backdrop-blur"} text-sm flex  items-center gap-2 justify-center  p-4 sticky bottom-0 text-center`}>
             <div>
-                © 2025 OBEHIOYE OYUGBO
+                © 2026 OBEHIOYE OYUGBO
             </div>
             <button onClick={()=>onClick()} className={`cursor-pointer p-2`}>
                 {!lightMode?
